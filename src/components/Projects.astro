@@ -1,0 +1,46 @@
+---
+import ProjectCard from './ProjectCard.astro';
+
+const projects = [
+	{
+		title: "Neon Nexus",
+		category: "Web Application",
+		image: "bg-purple-600",
+		link: "#"
+	},
+	{
+		title: "Void Commerce",
+		category: "E-Commerce",
+		image: "bg-emerald-600",
+		link: "#"
+	},
+	{
+		title: "Stark CMS",
+		category: "Open Source",
+		image: "bg-blue-600",
+		link: "#"
+	},
+	{
+		title: "Grid System",
+		category: "Design Tool",
+		image: "bg-rose-600",
+		link: "#"
+	}
+];
+---
+<section id="projects" class="py-32 px-4 max-w-7xl mx-auto">
+	<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+		<h2 class="text-6xl md:text-8xl font-black leading-none">
+			SELECTED <br /> <span class="text-yellow-400">PROJECTS</span>
+		</h2>
+		<p class="max-w-xs text-zinc-400 text-lg">
+			A collection of digital experiences built with precision and a touch of creative chaos.
+		</p>
+	</div>
+
+	<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+		{projects.map(project => (
+			<ProjectCard {...project} />
+		))}
+	</div>
+</section>

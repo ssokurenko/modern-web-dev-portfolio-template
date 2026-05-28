@@ -1,0 +1,42 @@
+---
+import '../styles/global.css';
+
+interface Props {
+	title: string;
+	description?: string;
+}
+
+const { title, description = "Web Dev Portfolio" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="bg-black text-white">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content={description} />
+		<title>{title}</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+	</head>
+	<body class="selection:bg-yellow-400 selection:text-black">
+		<slot />
+	</body>
+</html>
+
+<style is:global>
+	:root {
+		--accent: #facc15; /* yellow-400 */
+		--accent-dark: #a16207; /* yellow-800 */
+	}
+	html {
+		font-family: 'Inter', system-ui, sans-serif;
+	}
+	h1, h2, h3, h4, h5, h6 {
+		font-family: 'Playfair Display', serif;
+		text-transform: none;
+	}
+</style>

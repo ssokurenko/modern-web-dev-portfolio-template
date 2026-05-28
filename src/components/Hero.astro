@@ -1,0 +1,34 @@
+---
+---
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden px-4 py-20">
+	<!-- Background accent -->
+	<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-yellow-400/20 blur-[120px] rounded-full -z-10"></div>
+	
+	<div class="max-w-6xl w-full">
+		<p class="text-yellow-400 font-bold tracking-widest uppercase mb-4 animate-fade-in">Web Developer & Creative Coder</p>
+		<h1 class="text-7xl md:text-9xl font-extrabold leading-[0.85] tracking-tighter mb-8">
+			CRAFTING <br />
+			<span class="text-transparent border-t-2 border-b-2 border-white [-webkit-text-stroke:1px_white] hover:text-white transition-all duration-500 cursor-default">MODERN</span> <br />
+			EXPERIENCES
+		</h1>
+		
+		<div class="flex flex-col md:flex-row md:items-center gap-8 mt-12">
+			<a href="#projects" class="inline-block bg-yellow-400 text-black px-8 py-4 text-xl font-bold border-4 border-black shadow-[8px_8px_0px_0px_rgba(255,255,255,1)] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all">
+				VIEW MY WORK
+			</a>
+			<p class="max-w-xs text-zinc-400">
+				Specializing in high-performance web applications with a focus on bold design and clean code.
+			</p>
+		</div>
+	</div>
+</section>
+
+<style>
+	.animate-fade-in {
+		animation: fadeIn 1s ease-out forwards;
+	}
+	@keyframes fadeIn {
+		from { opacity: 0; transform: translateY(20px); }
+		to { opacity: 1; transform: translateY(0); }
+	}
+</style>
